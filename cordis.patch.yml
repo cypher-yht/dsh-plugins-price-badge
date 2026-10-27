@@ -1,0 +1,3 @@
+- insert:
+    - id: price-badge
+      name: '@local/dsh-price-badge'

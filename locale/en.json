@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DeepSeek Price Period Badge",
+    "description": "Shows whether DeepSeek API pricing is currently peak or off-peak, with a countdown to the next switch."
+  }
+}

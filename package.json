@@ -1,0 +1,50 @@
+{
+  "name": "@local/dsh-price-badge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "在 DSH Web 右下角常驻显示 DeepSeek API 当前处于高峰还是空闲（5 折）时段，倒计时下次切换并展示账户余额。",
+  "author": "cypher-yht",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "price",
+    "peak",
+    "off-peak",
+    "balance"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypher-yht/dsh-plugins-price-badge.git"
+  },
+  "homepage": "https://github.com/cypher-yht/dsh-plugins-price-badge#readme",
+  "bugs": {
+    "url": "https://github.com/cypher-yht/dsh-plugins-price-badge/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
